@@ -6,4 +6,4 @@ before_install:
   - docker build -t rohitdumbre86/docker-react-udemy -f Dockerfile.dev .
 
 script:
-  - docker run rohitdumbre86/docker-react-udemy npm run test -- --coverage
+  - docker run -e CI=true rohitdumbre86/docker-react-udemy npm run test
